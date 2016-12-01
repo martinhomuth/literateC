@@ -1,0 +1,35 @@
+#+TITLE: Literate Programming in C
+#+AUTHOR: Martin Homuth
+#+EMAIL: martin@martinhomuth.de
+
+To enable latex when exporting this document the following option has
+to be set:
+
+#+OPTIONS: tex:t
+
+* testapplication
+  :PROPERTIES:
+  :header-args: :tangle hello_world.c :main no :cache yes :eval no :exports bots :comments org
+  :END:
+
+  #+BEGIN_SRC C
+    #include <stdio.h>
+  #+END_SRC
+
+  Some more text
+  #+BEGIN_SRC C
+    void print_something(void)
+    {
+  	  printf("something\n");
+    }
+  #+END_SRC
+
+  Some text
+  #+BEGIN_SRC C
+    int main(int argc, char *argv[])
+    {
+  	printf("hello world\n");
+  	print_something();
+  	return 0;
+    }
+  #+END_SRC
